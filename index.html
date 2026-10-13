@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Marks Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Student Marks Calculator</h1>
+    <p class="subtitle">Enter marks for five subjects to calculate your result.</p>
+
+    <form id="marksForm">
+      <label for="studentName">Student Name</label>
+      <input id="studentName" type="text" placeholder="Enter student name" required>
+
+      <div class="subjects">
+        <div><label for="maths">Mathematics (out of 100)</label><input id="maths" type="number" min="0" max="100" required></div>
+        <div><label for="science">Science (out of 100)</label><input id="science" type="number" min="0" max="100" required></div>
+        <div><label for="english">English (out of 100)</label><input id="english" type="number" min="0" max="100" required></div>
+        <div><label for="social">Social Studies (out of 100)</label><input id="social" type="number" min="0" max="100" required></div>
+        <div><label for="computer">Computer (out of 100)</label><input id="computer" type="number" min="0" max="100" required></div>
+      </div>
+
+      <button type="submit">Calculate Result</button>
+      <button type="reset" class="secondary">Clear</button>
+    </form>
+
+    <section id="result" class="result" aria-live="polite" hidden>
+      <h2>Result</h2>
+      <p id="resultName"></p>
+      <p><strong>Total Marks:</strong> <span id="total"></span> / 500</p>
+      <p><strong>Percentage:</strong> <span id="percentage"></span>%</p>
+      <p><strong>Grade:</strong> <span id="grade"></span></p>
+      <p><strong>Status:</strong> <span id="status"></span></p>
+    </section>
+    <footer>Student project • HTML, CSS & JavaScript</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
